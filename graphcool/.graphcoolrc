@@ -1,0 +1,4 @@
+targets:
+  prod: shared-eu-west-1/cjahpbjf62fze0179mollm66p
+  local: local/cjahltbm701bv0115q42wcmq6
+  default: local

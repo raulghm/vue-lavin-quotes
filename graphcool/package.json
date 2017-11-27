@@ -1,0 +1,8 @@
+{
+  "name": "graphcool",
+  "version": "1.0.0",
+  "description": "My Graphcool Service",
+  "dependencies": {
+    "twit": "^2.2.9"
+  }
+}

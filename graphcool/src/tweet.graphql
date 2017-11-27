@@ -1,0 +1,7 @@
+type TweetPayload {
+  result: String!
+}
+
+extend type Query {
+  tweet: TweetPayload
+}
