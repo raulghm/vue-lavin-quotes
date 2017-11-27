@@ -3,7 +3,7 @@
     <div class="Logo">
       <img src="./assets/logo.png">
       <h2>Lavin Quotes</h2>
-      <h3>using Vue + Graphcool Api resolver</h3>
+      <h3>using Vue + Twitter Api + Graphcool Api resolver</h3>
     </div>
 
     <Lavin/>
@@ -27,17 +27,22 @@ export default {
 </script>
 
 <style>
+html {
+  background: linear-gradient(to bottom, #34495d, #4cd698);
+  height: 100vh;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #fff;
   margin-top: 60px;
 }
 
 img {
-  width: 100px;
+  width: 60px;
 }
 
 /**
