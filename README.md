@@ -1,6 +1,11 @@
-# lavin-vue-quotes
+# Vue Lavin Quotes
 
-> Frases random de Lavin con Vue + Graphcool
+> Frases random de Lavin with Vue + Graphcool backend
+
+* Vue 2.x
+* Vue-apollo 3.x
+* Twitter Api
+* Graphcool Function Resolver
 
 ## Build Setup
 
