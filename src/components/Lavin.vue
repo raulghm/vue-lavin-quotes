@@ -1,6 +1,5 @@
 <template>
   <div class="Lavin">
-    <div class="Lavin-avatar"></div>
     <div class="Lavin-quote">
       <small v-if="!tweet">loading...</small>
       <img v-if="tweet" class="Lavin-icon" src="https://image.flaticon.com/icons/svg/23/23713.svg" alt="icon">
@@ -12,7 +11,10 @@
         ></blockquote>
       </transition>
 
-      <small>@ideasdelavin</small>
+      <footer>
+        <p><small>Using Vue + Twitter API + Graphcool API resolver</small></p>
+        <p><small>Twits from: <a href="https://twitter.com/ideasdelavin">@ideasdelavin</a> | Source: <a href="https://github.com/raulghm/vue-lavin-quotes">raulghm/vue-lavin-quotes</a></small></p>
+      </footer>
     </div>
   </div>
 </template>
@@ -24,7 +26,6 @@ export default {
   name: 'HelloWorld',
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App',
       tweet: null,
     }
   },
@@ -41,19 +42,10 @@ export default {
 </script>
 
 <style scoped>
+
 .Lavin {
   text-align: center;
   padding: 20px;
-}
-
-.Lavin-avatar {
-  display: inline-block;
-  background-image: url(https://pbs.twimg.com/profile_images/460949987816267776/ZGXxQz8I_400x400.jpeg);
-  border-radius: 50%;
-  width: 12vw;
-  height: 12vw;
-  background-size: cover;
-  background-position: 50%;
 }
 
 .Lavin-quote {
@@ -78,5 +70,11 @@ export default {
   display: inline-block;
   font-family: Georgia, Serif;
   line-height: 1.1;
+}
+
+.Lavin footer {
+  border-top: 1px solid rgba(255, 255, 255, .2);
+  margin-top: 3rem;
+  padding-top: 1rem;
 }
 </style>
