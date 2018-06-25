@@ -1,12 +1,12 @@
 <template>
   <div id="app">
     <div class="Logo">
-      <img src="./assets/logo.png">
-      <h2>Lavin Quotes</h2>
-      <h3>using Vue + Twitter Api + Graphcool Api resolver</h3>
+      <div class="Lavin-avatar"></div>
+      <h1>Lavin Quotes</h1>
     </div>
 
     <Lavin/>
+
   </div>
 </template>
 
@@ -29,7 +29,7 @@ export default {
 <style>
 html {
   background: linear-gradient(to bottom, #34495d, #4cd698);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #app {
@@ -41,8 +41,22 @@ html {
   margin-top: 60px;
 }
 
+.Lavin-avatar {
+  display: inline-block;
+  background-image: url(https://pbs.twimg.com/profile_images/460949987816267776/ZGXxQz8I_400x400.jpeg);
+  border-radius: 50%;
+  width: 12vw;
+  height: 12vw;
+  background-size: cover;
+  background-position: 50%;
+}
+
 img {
   width: 60px;
+}
+
+a {
+  color: #fff;
 }
 
 /**
