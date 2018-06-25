@@ -1,10 +1,13 @@
 <template>
   <div class="Lavin">
-    <div class="Lavin-avatar"></div>
-    <h1>Lavin Quotes</h1>
+    <div class="Lavin-header">
+      <h1>Lavin Quotes</h1>
+      <div class="Lavin-avatar"></div>
+    </div>
 
     <div class="Lavin-quote">
-      <small v-if="!tweet">loading...</small>
+      <Loading type="relative" v-if="!tweet" />
+
       <img v-if="tweet" class="Lavin-icon" src="https://image.flaticon.com/icons/svg/23/23713.svg" alt="icon">
 
       <transition name="fade">
@@ -16,7 +19,7 @@
 
       <footer>
         <p><small>Using Vue + Twitter API + Graphcool API resolver</small></p>
-        <p><small>Twits from: <a href="https://twitter.com/ideasdelavin">@ideasdelavin</a> | Source: <a href="https://github.com/raulghm/vue-lavin-quotes">raulghm/vue-lavin-quotes</a></small></p>
+        <p><small>Tweets from: <a href="https://twitter.com/ideasdelavin">@ideasdelavin</a> | Source: <a href="https://github.com/raulghm/vue-lavin-quotes">raulghm/vue-lavin-quotes</a></small></p>
       </footer>
     </div>
   </div>
@@ -24,9 +27,14 @@
 
 <script>
 import TWEET from '@/gql/Tweet.gql'
+import Loading from '@/components/Loading'
 
 export default {
   name: 'Lavin',
+
+  components: {
+    Loading,
+  },
 
   data() {
     return {
@@ -51,6 +59,10 @@ export default {
   padding: 20px;
 }
 
+.Lavin-header {
+  margin-bottom: 20px;
+}
+
 .Lavin-avatar {
   display: inline-block;
   background-image: url(https://pbs.twimg.com/profile_images/460949987816267776/ZGXxQz8I_400x400.jpeg);
@@ -61,6 +73,7 @@ export default {
   min-height: 100px;
   background-size: cover;
   background-position: 50%;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
 }
 
 .Lavin-quote {
