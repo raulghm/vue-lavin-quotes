@@ -2,7 +2,14 @@
   "name": "graphcool",
   "version": "1.0.0",
   "description": "My Graphcool Service",
+  "scripts": {
+    "deploy:local": "node -r dotenv/config $(which graphcool) deploy -t local dotenv_config_path=../.env",
+    "deploy:prod": "node -r dotenv/config $(which graphcool) deploy -t prod dotenv_config_path=../.env"
+  },
   "dependencies": {
     "twit": "^2.2.9"
+  },
+  "devDependencies": {
+    "dotenv": "^6.0.0"
   }
 }

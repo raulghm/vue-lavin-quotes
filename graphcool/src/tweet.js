@@ -1,10 +1,10 @@
 const Twit = require('twit')
 
 const t = new Twit({
-  consumer_key: 'PVXFHEdZJZ8HnMrtZPAMvy0QD',
-  consumer_secret: 'KCEhOr0Eapyiujs0CIcOJ9xbtW7ti2N7seCXSoTSdY3D3xWU35',
-  access_token: '22852911-stUl1Kp1NqmFizNcVZYJUkAWNV9KrcfO8X6XJRTUf',
-  access_token_secret: 'W6Pogn0FxqJ3ONKOeORVQAieDMGfqThmfwvsYK6EMHNgl',
+  consumer_key: process.env.TWITTER_KEY,
+  consumer_secret: process.env.TWITTER_SECRET,
+  access_token: process.env.TWITTER_TOKEN,
+  access_token_secret: process.env.TWITTER_TOKEN_SECRET,
   timeout_ms: 60 * 1000,  // optional HTTP request timeout to apply to all requests.
 })
 
