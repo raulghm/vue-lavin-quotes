@@ -31,7 +31,7 @@ const getTweet = () =>
     screen_name: 'ideasdelavin',
     count: max,
     exclude_replies: true,
-    include_rts: false
+    include_rts: false,
   })
   .catch(err => err)
   .then((result) => {
@@ -45,7 +45,7 @@ const getTweet = () =>
     return tweets[getRandom(tweets.length)].text
   })
 
-export default async event => {
+export default async () => {
   const tweet = await getTweet()
 
   return {
