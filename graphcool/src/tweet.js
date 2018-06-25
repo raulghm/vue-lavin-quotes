@@ -30,6 +30,8 @@ const getTweet = () =>
   t.get('statuses/user_timeline', {
     screen_name: 'ideasdelavin',
     count: max,
+    exclude_replies: true,
+    include_rts: false
   })
   .catch(err => err)
   .then((result) => {
