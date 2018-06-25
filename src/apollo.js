@@ -4,12 +4,8 @@ import { HttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import VueApollo from 'vue-apollo'
 
-const uri = process.env.NODE_ENV === 'development' ?
-            'http://localhost:60000/simple/v1/cjahltbm701bv0115q42wcmq6' :
-            'https://api.graph.cool/simple/v1/cjahpbjf62fze0179mollm66p'
-
 const httpLink = new HttpLink({
-  uri,
+  uri: process.env.GRAPHQL_API
 })
 
 // Create the apollo client
