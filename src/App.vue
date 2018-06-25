@@ -1,12 +1,6 @@
 <template>
   <div id="app">
-    <div class="Logo">
-      <div class="Lavin-avatar"></div>
-      <h1>Lavin Quotes</h1>
-    </div>
-
     <Lavin/>
-
   </div>
 </template>
 
@@ -15,10 +9,6 @@ import Lavin from '@/components/Lavin'
 
 export default {
   name: 'app',
-
-  data: () => ({
-    // env: process.env.NODE_ENV,
-  }),
 
   components: {
     Lavin,
@@ -39,20 +29,6 @@ html {
   text-align: center;
   color: #fff;
   margin-top: 60px;
-}
-
-.Lavin-avatar {
-  display: inline-block;
-  background-image: url(https://pbs.twimg.com/profile_images/460949987816267776/ZGXxQz8I_400x400.jpeg);
-  border-radius: 50%;
-  width: 12vw;
-  height: 12vw;
-  background-size: cover;
-  background-position: 50%;
-}
-
-img {
-  width: 60px;
 }
 
 a {
