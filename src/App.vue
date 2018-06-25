@@ -17,22 +17,29 @@ export default {
 </script>
 
 <style>
+@import 'cata-base';
+
 html {
   background: linear-gradient(to bottom, #34495d, #4cd698);
   min-height: 100vh;
 }
 
-#app {
+body {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #fff;
-  margin-top: 60px;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 a {
   color: #fff;
+}
+
+blockquote {
+  margin: 0;
 }
 
 /**

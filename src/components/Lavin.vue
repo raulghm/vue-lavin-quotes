@@ -16,12 +16,12 @@
           v-if="tweet"
         ></blockquote>
       </transition>
-
-      <footer>
-        <p><small>Using Vue + Twitter API + Graphcool API resolver</small></p>
-        <p><small>Tweets from: <a href="https://twitter.com/ideasdelavin">@ideasdelavin</a> | Source: <a href="https://github.com/raulghm/vue-lavin-quotes">raulghm/vue-lavin-quotes</a></small></p>
-      </footer>
     </div>
+
+    <footer>
+      <p><small>Using Vue + Twitter API + Graphcool API resolver</small></p>
+      <p><small>Tweets from: <a href="https://twitter.com/ideasdelavin">@ideasdelavin</a> | Source: <a href="https://github.com/raulghm/vue-lavin-quotes">raulghm/vue-lavin-quotes</a></small></p>
+    </footer>
   </div>
 </template>
 
@@ -57,35 +57,52 @@ export default {
 .Lavin {
   text-align: center;
   padding: 20px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  height: 90vh;
 }
 
 .Lavin-header {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.Lavin-header h1 {
+  font-size: 3rem;
 }
 
 .Lavin-avatar {
   display: inline-block;
   background-image: url(https://pbs.twimg.com/profile_images/460949987816267776/ZGXxQz8I_400x400.jpeg);
   border-radius: 50%;
-  width: 12vw;
-  height: 12vw;
+  width: 10vw;
+  height: 10vw;
   min-width: 100px;
   min-height: 100px;
   background-size: cover;
   background-position: 50%;
   box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+  margin-top: 10px;
 }
 
 .Lavin-quote {
   text-align: center;
+  max-width: 400px;
 }
 
 .Lavin-icon {
-  width: 200px;
+  width: 160px;
   position: absolute;
   z-index: -1;
   opacity: .1;
-  margin-top: -20px;
+  margin-top: -40px;
+  margin-left: -40px;
+}
+
+@media (min-width: 40em) {
+  .Lavin-icon {
+    width: 200px;
+  }
 }
 
 .Lavin-quote small {
@@ -94,15 +111,26 @@ export default {
 
 .Lavin-quote blockquote {
   font-size: 3rem;
-  max-width: 800px;
   display: inline-block;
   font-family: Georgia, Serif;
   line-height: 1.1;
 }
 
+@media (min-width: 40em) {
+  .Lavin-quote blockquote {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 50em) {
+  .Lavin-quote blockquote {
+    font-size: 5rem;
+  }
+}
+
 .Lavin footer {
   border-top: 1px solid rgba(255, 255, 255, .2);
-  margin-top: 3rem;
+  margin-top: 6em;
   padding-top: 1rem;
 }
 </style>
