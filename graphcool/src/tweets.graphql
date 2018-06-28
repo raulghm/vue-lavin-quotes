@@ -1,0 +1,7 @@
+type TweetsPayload {
+  result: Json!
+}
+
+extend type Query {
+  tweets: TweetsPayload
+}

@@ -12,3 +12,15 @@ functions:
           TWITTER_TOKEN_SECRET: ${env:TWITTER_TOKEN_SECRET}
     type: resolver
     schema: src/tweet.graphql
+
+  tweets:
+    handler:
+      code:
+        src: src/tweets.js
+        environment:
+          TWITTER_KEY: ${env:TWITTER_KEY}
+          TWITTER_SECRET: ${env:TWITTER_SECRET}
+          TWITTER_TOKEN: ${env:TWITTER_TOKEN}
+          TWITTER_TOKEN_SECRET: ${env:TWITTER_TOKEN_SECRET}
+    type: resolver
+    schema: src/tweets.graphql
