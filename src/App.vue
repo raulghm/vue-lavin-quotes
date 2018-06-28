@@ -1,31 +1,40 @@
 <template>
   <div id="app">
-    <Lavin/>
+    <Lavin />
   </div>
 </template>
 
 <script>
-import Lavin from '@/components/Lavin'
+import Lavin from '@/views/Lavin'
 
 export default {
   name: 'app',
 
   components: {
-    Lavin,
-  },
+    Lavin
+  }
 }
 </script>
 
 <style>
-@import 'cata-base';
+@import '~normalize.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 html {
   background: linear-gradient(to bottom, #34495d, #4cd698);
   min-height: 100vh;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 62.5%;
 }
 
 body {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: var(--font-family-normal), Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
