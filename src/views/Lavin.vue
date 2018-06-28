@@ -135,7 +135,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .Lavin {
   text-align: center;
   padding: 20px;
