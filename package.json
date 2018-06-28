@@ -6,6 +6,7 @@
     "serve": "vue-cli-service serve",
     "start": "npm run serve",
     "build": "vue-cli-service build",
+    "dist": "npm run build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
