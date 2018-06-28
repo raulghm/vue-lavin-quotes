@@ -1,10 +1,8 @@
 const Twit = require('./twit')
 
-const getRandom = max => Math.floor(Math.random() * max)
-
 export default async () => {
   const tweets = await Twit()
-  const result = tweets.data[getRandom(tweets.data.length)].text
+  const result = tweets.data.map(tw => tw.text)
 
   return {
     data: {

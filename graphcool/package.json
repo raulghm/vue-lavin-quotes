@@ -4,12 +4,15 @@
   "description": "My Graphcool Service",
   "scripts": {
     "deploy:local": "node -r dotenv/config $(which graphcool) deploy -t local dotenv_config_path=../.env",
-    "deploy:prod": "node -r dotenv/config $(which graphcool) deploy -t prod dotenv_config_path=../.env"
+    "deploy:prod": "node -r dotenv/config $(which graphcool) deploy -t prod dotenv_config_path=../.env",
+    "format": "prettier-standard 'src/**/*.js'"
   },
   "dependencies": {
+    "lodash.samplesize": "^4.2.0",
     "twit": "^2.2.9"
   },
   "devDependencies": {
-    "dotenv": "^6.0.0"
+    "dotenv": "^6.0.0",
+    "prettier-standard": "^8.0.1"
   }
 }

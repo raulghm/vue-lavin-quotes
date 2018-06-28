@@ -9,18 +9,18 @@ export default {
   name: 'Loading',
 
   props: [
-    'type',
+    'type'
   ],
 
   computed: {
-    _type() {
+    _type () {
       return {
         'Loading--top': this.type === 'top',
         'Loading--relative': this.type === 'relative',
-        'Loading--left': this.type === 'left',
+        'Loading--left': this.type === 'left'
       }
-    },
-  },
+    }
+  }
 }
 </script>
 
