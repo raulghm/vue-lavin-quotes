@@ -30,7 +30,7 @@ import TWEETS from '@/graphql/Tweets.gql'
 import Loading from '@/components/Loading'
 import Avatar from '@/components/Avatar'
 
-const INTERVAL = 6000
+const INTERVAL = 10000
 
 export default {
   name: 'Lavin',
