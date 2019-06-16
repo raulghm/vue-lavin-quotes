@@ -1,5 +1,6 @@
 type TweetPayload {
   result: String!
+  image: String
 }
 
 extend type Query {
