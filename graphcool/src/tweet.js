@@ -6,7 +6,7 @@ export default async () => {
   return {
     data: {
       result: result.text,
-      image: result.text
+      image: result.image
     }
   }
 }
