@@ -44,10 +44,10 @@ const getRandom = max => Math.floor(Math.random() * max)
 
 /**
  * Obtiene tweets
- * @param {number} [count=20] - maximo de tweets a extraer
- * @return {Promise<Object>}
+ * @param {number} [count=200] - maximo de tweets a extraer
+ * @return {Promise<Array<Object>>}
  */
-const getTweet = async (count = 200) => {
+const getTweets = async (count = 200) => {
   const tweets = await t
     .get('statuses/user_timeline', {
       screen_name: 'ideasdelavin',
@@ -57,12 +57,12 @@ const getTweet = async (count = 200) => {
       trim_user: true,
       include_entities: true
     })
-  const result = tweets.data[getRandom(tweets.data.length)]
-  if (hasImage(result.text)) {
-    const image = await getImageFromEntities(result)
-    result.image = image
-  }
-  return result
+  return tweets
 }
 
-module.exports = getTweet
+module.exports = {
+  getImageFromEntities,
+  hasImage,
+  getRandom,
+  getTweets
+}
