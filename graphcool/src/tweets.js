@@ -1,8 +1,8 @@
-const Twit = require('./twit')
+const { getTweets } = require('./twit')
 
 export default async () => {
-  const tweets = await Twit()
-  const result = tweets.data.map(tw => tw.text)
+  const tweets = await getTweets()
+  const result = tweets.data.map(({ text }) => text)
 
   return {
     data: {
